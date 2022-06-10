@@ -3,5 +3,14 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
-    background-color: royalblue;
+    background-image: url('https://images.unsplash.com/photo-1629197521865-4946b4acd2b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=825&q=80');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% calc(100%);
+    /* background-color: royalblue; */
+    /*
+        attribute
+        Photo by Kseniya Lapteva on Unsplash
+        https://unsplash.com/photos/A4rqd2g-eLo?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+    */
 }
