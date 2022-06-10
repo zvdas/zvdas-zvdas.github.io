@@ -1,8 +1,10 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <h1 class="text-center text-white">{{ project [1].project_name }}</h1>
-  <p class="text-white">Development in progress</p>
-  <!-- <p class="text-white">Click <a class="text-white" href="#"><b>here</b></a> to go to the project online test application.</p> -->
+
+  <h1 class="text-center text-white">{{ project[1].project_name }}</h1>
+
+  <div [innerHTML]="project[1].message"></div>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-inner">
       <div *ngFor="let screenshot of project[1].screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'">
@@ -18,6 +20,7 @@
       </button>
     </div>
   </div>
+
   <div class="accordion accordion-flush my-2" id="headingMain">
     <div class="accordion-item">
       <h3 class="accordion-header" id="headingOne">
@@ -31,6 +34,7 @@
       </div>
     </div>
   </div>
+
   <div class="accordion-item">
     <h3 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -58,4 +62,5 @@
         </div>
       </div>
   </div>
+  
 </div>
