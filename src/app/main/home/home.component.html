@@ -2,12 +2,12 @@
 <div class="container">
     <div class="row">
         <h1 class="text-center text-white">Project Portfolio</h1>
-        <div class="accordion" id="headingAngular">
+        <div class="accordion" id="headingAppType">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOta">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ota" aria-expanded="false" aria-controls="ota">Angular</button>
+                <h2 class="accordion-header" id="headingAngular">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#angular" aria-expanded="false" aria-controls="angular">Angular</button>
                 </h2>
-                <div class="accordion-collapse collapse" aria-labelledby="headingOta" id="ota" data-bs-parent="headingAngular">
+                <div class="accordion-collapse collapse" aria-labelledby="headingAngular" id="angular" data-bs-parent="headingAppType">
                     <div class="accordion-body">
                         <ol>
                             <h4><li>Online Test Application</li></h4>
@@ -20,6 +20,27 @@
                                 A food blog application developed in Angular serving files from a JSON server (which serves local JSON files as a fake API server).
                             </p>
                             <p>Click <a class="blue-text" (click)="goToFba()">Here</a> to View Details</p>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingReact">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#react" aria-expanded="false" aria-controls="react">React</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="headingReact" id="react" data-bs-parent="headingAppType">
+                    <div class="accordion-body">
+                        <ol>
+                            <h4><li>Event Finder Application</li></h4>
+                            <p>
+                                An event application developed in React serving files from a JSON server (which serves local JSON files as a fake API server).
+                            </p>
+                            <p>Click <a class="blue-text" (click)="goToEfa()">Here</a> to View Details</p>
+                            <h4><li>Pokemon Search Application</li></h4>
+                            <p>
+                                A pokemon search application developed in React serving files from a JSON server (which serves local JSON files as a fake API server).
+                            </p>
+                            <p>Click <a class="blue-text" (click)="goToPsa()">Here</a> to View Details</p>
                         </ol>
                     </div>
                 </div>

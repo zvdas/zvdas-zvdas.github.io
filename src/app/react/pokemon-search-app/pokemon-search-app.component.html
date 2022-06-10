@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <h1 class="text-center">{{ project [3].project_name }}</h1>
-    <p class="text-white">Click <a class="text-white" href="https://onlinetestapp-8c5b6.web.app"><b>here</b></a> to go to the project online test application.</p>
+    <h1 class="text-center text-white">{{ project [3].project_name }}</h1>
+    <p class="text-white">Development in progress</p>
+    <!-- <p class="text-white">Click <a class="text-white" href="#"><b>here</b></a> to go to the project online test application.</p> -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
             <div *ngFor="let screenshot of project[3].screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'" style="height: 500px;">

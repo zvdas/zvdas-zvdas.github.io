@@ -21,4 +21,12 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/fba']);
   }
 
+  goToEfa(){
+    this.router.navigate(['efa']);
+  }
+
+  goToPsa(){
+    this.router.navigate(['psa']);
+  }
+
 }
