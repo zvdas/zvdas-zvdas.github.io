@@ -10,11 +10,20 @@ import project_json from 'src/app/files/project.json';
 export class ProjectService {
 
   project: Project[] = project_json.project;
+  numMessage!: number;
 
   constructor() { }
 
   getData(){
     return this.project;
+  }
+
+  setNumber(number: number){
+    this.numMessage = number;
+  }
+
+  getNumber(){
+    return this.numMessage;
   }
 
 }
