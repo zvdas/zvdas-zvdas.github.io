@@ -22,11 +22,15 @@ export class NavbarComponent implements OnInit {
   }
 
   goToEfa(){
-    this.router.navigate(['efa']);
+    this.router.navigate(['/efa']);
   }
 
   goToPsa(){
-    this.router.navigate(['psa']);
+    this.router.navigate(['/psa']);
+  }
+
+  goToTma(){
+    this.router.navigate(['/tma']);
   }
 
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { EventEmitter } from '@angular/core';
 import { ProjectService } from 'src/app/services/project/project.service';
 
 @Component({
@@ -48,4 +47,11 @@ export class HomeComponent implements OnInit {
     */
   }
 
+  goToTma(){
+    this.router.navigate(['/tma']);
+    /*
+      this.ps.setNumber(3);
+      this.router.navigate(['/template']);
+    */
+  }
 }

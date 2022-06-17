@@ -6,12 +6,14 @@ import { OnlineTestAppComponent } from './angular/online-test-app/online-test-ap
 import { TemplateComponent } from './main/template/template.component';
 import { EventFinderAppComponent } from './react/event-finder-app/event-finder-app.component';
 import { PokemonSearchAppComponent } from './react/pokemon-search-app/pokemon-search-app.component';
+import { ThreedAppComponent } from './angular/threed-app/threed-app.component';
 
 const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'template', component: TemplateComponent},
   {path:'fba', component: BlogAppComponent},
   {path:'ota', component: OnlineTestAppComponent},
+  {path:'tma', component: ThreedAppComponent},
   {path:'efa', component: EventFinderAppComponent},
   {path: 'psa', component: PokemonSearchAppComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
