@@ -1,0 +1,53 @@
+<h1><strong>Food Blog Application</strong></h1>
+<ul>
+<li>Create a new app by running the following command in terminal<br/>
+<code>ng new fba_v1</code></li>
+<li>Once created, go into the app folder by running the following command in terminal<br/>
+<code>cd fba_v1</code></li>
+<li>Install bootstrap & json-server by running the following command in terminal<br/>
+<code>npm i --save bootstrap json-server</code></li>
+<li>Generate the module blog by running the following command in terminal<br/>
+<code>ng g m blog -m=app</code></li>
+<li>Generate the classes blog & contact inside the blog module by running the following command in terminal<br/>
+<code>ng g cl blog/classes/blog/blog --type=model<br/>
+ng g cl blog/classes/contact/contact --type=model</code></li>
+<li>Generate the services blog & contact inside the blog module by running the following command in terminal<br/>
+<code>ng g s blog/services/blog/blog<br/>
+ng g s blog/services/contact/contact</code></li>
+<li>Generate the components home, blog, contact, show, error & navbar inside the blog module by running the following command in terminal<br/>
+<code>ng g c blog/components/home<br/>
+ng g c blog/components/blog<br/>
+ng g c blog/components/contact<br/>
+ng g c blog/components/show<br/>
+ng g c blog/components/error<br/>
+code>ng g c blog/components/navbar</code></li>
+<li>Create a folder files inside the blog module and a json file api-placeholder with an empty json error</li>
+<li>Import bootstrap in the styles.css file and give the body background a velvet colour</li>
+<li>Import bootstrap in the main.ts file</li>
+<li>Add the routes in the app-routing.module.ts file and add property { useHash: true } in RouterModule to avoid 404 issues while hosting the application.</li>
+<li>Add the objects (id, date, title, author, message & category) to the blog.model.ts file</li>
+<li>Add the objects (Name, Email, Password, Phone, Address_Line_1, Address_Line_2, City, State, Country & Zip) to the contact.model.ts file</li>
+<li>Import the HTTPClientModule in blog.module.ts to enable HTTPClient which can make API calls like get, post, put & delete</li>
+<li>Declare the url for API CRUD operation, provide the methods for API CRUD & Inject the HTTPClient into the constructor to perform the calls in the blog.service.ts file</li>
+<li>Declare the url for API CRUD operation, provide the methods for API CRUD & Inject the HTTPClient into the constructor to perform the calls in the contact.service.ts file</li>
+<li>Import the FormsModule (template driven) & ReactiveFormsModule (model driven) in blog.module.ts to be used by components implementing forms</li>
+<li>Create functions in navbar.component.ts, which will be available to navbar.component.html to implement using functions. Inject Router from RouterModule to navigate to contact & blog</li>
+<li>Create the HTML elements to be displayed in the browser by entering the following in navbar.component.html file</li>
+<li>Create the HTML elements to be displayed in the browser (by entering the following in home.component.html file). Ensure that the app-navbar tag is entered so that the navbar is displayed in the browser along with home component elements.</li>
+<li>Invoke the methods from the BlogService in the blog-page.component.ts, which will be available to blog.component.html to implement using functions.</li>
+<li>Create the HTML elements to be displayed in the browser (by entering the following in blog.component.html file) and invoke the functions created in blog.component.ts. Ensure that the app-navbar tag is entered so that the navbar is displayed in the browser along with blog component elements.</li>
+<li>Invoke the methods from the ContactService in the contact.component.ts, which will be available to contact.component.html to implement using functions.</li>
+<li>Create the properties of the tags in contact.component.css file, which will be implemented in contact.component.html file</li>
+<li>Create the HTML elements to be displayed in the browser (by entering the following in contact.component.html file) and invoke the functions created in contact.component.ts. Ensure that the app-navbar tag is entered so that the navbar is displayed in the browser along with contact component elements.</li>
+<li>Invoke the methods from the ContactService in the show.component.ts, which will be available to show.component.html to implement using functions.</li>
+<li>Create the HTML elements to be displayed in the browser (by entering the following in show.component.html file) and invoke the functions created in show.component.ts. Ensure that the app-navbar tag is entered so that the navbar is displayed in the browser along with show component elements.</li>
+<li>Invoke the methods from the router in the error.component.ts, which will be available to error.component.html to implement using functions.</li>
+<li>Create the HTML elements to be displayed in the browser (by entering the following in error.component.html file) and invoke the functions created in error.component.ts. Ensure that the app-navbar tag is entered so that the navbar is displayed in the browser along with error component elements.</li>
+<li>Create the properties of the tags in app.component.css file, which will be implemented in app.component.html file</li>
+<li>Export the NavbarComponent in blog.module.ts so that it is available in app.component.html</li>
+<li>Ensure that router-outlet tag is mentioned in app.component.html file, which will enable display of the components in routes array of app-routing.module.ts in the browser.</li>
+<li>View the app in browser by running the following command in terminal<br/>
+<code>ng serve --open</code></li>
+<li>Host the json file on json-server (by running the following command in terminal) to serve APIs for the application to consume. This can be later replaced by web APIs or APIs created in NodeJS with Express & a database (like MongoDB)<br/>
+<code>json-server --watch .\src\app\blog\files\api-placeholder.json"</code></li>
+</ul>
