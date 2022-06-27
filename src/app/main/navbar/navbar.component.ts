@@ -33,4 +33,12 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/tma']);
   }
 
+  goToLms(){
+    this.router.navigate(['/lms']);
+  }
+
+  goToOml(){
+    this.router.navigate(['/oml']);
+  }
+  
 }

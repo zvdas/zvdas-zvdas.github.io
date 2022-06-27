@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularModule } from './angular/angular.module';
 import { MainModule } from './main/main.module';
-import { ReactModule } from './react/react.module';
+import { TechnologiesModule } from './technologies/technologies.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +13,11 @@ import { ReactModule } from './react/react.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularModule,
     MainModule,
-    ReactModule
+    TechnologiesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

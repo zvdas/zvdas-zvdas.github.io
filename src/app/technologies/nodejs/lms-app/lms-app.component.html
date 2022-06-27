@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <h1 class="text-center text-white">{{ project[5].project_name }}</h1>
+
+  <div [innerHTML]="project[5].message"></div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+      <div *ngFor="let screenshot of project[5].screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'">
+        <img src={{screenshot}} class="d-block w-100" alt="...">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="accordion accordion-flush my-2" id="headingMain">
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Problem Statement
+        </button>
+      </h3>
+      <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingTwo" data-bs-parent="headingMain">
+        <div class="accordion-body">
+        <div [innerHTML]="project[5].problem"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Code
+      </button>
+    </h3>
+    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="headingMain">
+      <div class="accordion-body">
+        <!-- <iframe width="100%" height="350" src="data:text/html;charset=utf-8,<head><script src='https://gist.github.com/zvdas/1a38c4bc921296907f50d6b3c980faa7.js'></script></head><body></body>"></iframe> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Procedure
+      </button>
+    </h3>
+      <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="headingMain">
+        <div class="accordion-body">
+          <div [innerHTML]="project[5].procedure"></div>
+        </div>
+      </div>
+  </div>
+  
+</div>

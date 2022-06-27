@@ -50,7 +50,23 @@ export class HomeComponent implements OnInit {
   goToTma(){
     this.router.navigate(['/tma']);
     /*
-      this.ps.setNumber(3);
+      this.ps.setNumber(4);
+      this.router.navigate(['/template']);
+    */
+  }
+
+  goToLms(){
+    this.router.navigate(['/lms']);
+    /*
+      this.ps.setNumber(5);
+      this.router.navigate(['/template']);
+    */
+  }
+
+  goToOml(){
+    this.router.navigate(['/oml']);
+    /*
+      this.ps.setNumber(6);
       this.router.navigate(['/template']);
     */
   }
