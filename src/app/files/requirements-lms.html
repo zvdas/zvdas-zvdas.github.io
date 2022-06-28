@@ -1,5 +1,5 @@
-<ol><li>Business Requirement - Overview<br/>
-To develop the Learning management  application with features given below:</li>
+<strong>Business Requirement - Overview</strong><br/>
+<ol><li>To develop the Learning management  application with features given below:</li>
 <ol type=A><li>Front-end Component: There are different pages in the application that have to be created i.e. Home page ,Registration page and dashboard page etc.</li>
 <li>API (Application Programming Interface) Component: </li>
 <ol type=i><li>API Component ( /api/login ): Implement REST endpoints POST.</li>
@@ -13,7 +13,7 @@ To develop the Learning management  application with features given below:</li>
 <li>Schema Component : Create collections user, course using MongoDB or MySql.</li></ol>
 <li>Technical Specifications</li>
 <ol type=A><li>Software and application details:<br/>
-<table border="1">
+<table border='1'>
     <thead>
         <tr>
             <th>Tools/Packages</th>
@@ -44,7 +44,7 @@ Following screenshot represents the registration page view:
 </ol>
 <li>Application features</li>
 The application should have the following set of built-in features:<br/>
-<ol type="A"><li>Front-end Component</li>
+<ol type='A'><li>Front-end Component</li>
 <ul><li>Home page</li>
 <ul><li>The Home page has a button where user can on click it will take user to registration page</li>
 <li>Registration page</li>
@@ -54,8 +54,8 @@ The application should have the following set of built-in features:<br/>
 <ul><li>Manage Lesson, Manage Course Material</li></ul></ol>
 <li>Project deliverables</li>
 Below are the deliverables:
-<ol type="A"><li>Front-end Component</li>
-<ol type="I"><li>HTML & CSS code for the registration & login page, manage course and edit profile is provided. Implement the missing logic using JavaScript</li>
+<ol type='A'><li>Front-end Component</li>
+<ol type='I'><li>HTML & CSS code for the registration & login page, manage course and edit profile is provided. Implement the missing logic using JavaScript</li>
 <ul>fileNames
 <li>register.ejs(or .pug)</li>
 <li>createCourse.ejs(or .pug)</li>
@@ -65,44 +65,44 @@ Below are the deliverables:
 <li>index.js</li></ul>
 Make the given files to make the application work properly<br/>
 <li>The user can register in two ways</li>
-<ol type="i"><li>an instructor </li>
+<ol type='i'><li>an instructor </li>
 <li>As a student</li></ol>
 Registration and login process should be working 
 <li>Course creation, update, deletion should be implemented accordingly</li>
 <li>Implement the following logics</li></ol></ol>
-<ol type="a">
+<ol type='a'>
 <li>Implement login using the Post method (send Email id and password). Example request body should be in:<br/>
-<code>{emailId: "test@gmail.com", password: "test"}</code></li>
+<code>{emailId: 'test@gmail.com', password: 'test'}</code></li>
 <li>User registration should be implemented (take the required details and send post request for user registration). Example request body should be in:><br/>
 <ul><li>for instructor<br/>
-<code>{"name": "test", "type": "1", "emailId": "test@gmail.com", "password": "aaa"}</code></li>
+<code>{'name': 'test', 'type': '1', 'emailId': 'test@gmail.com', 'password': 'aaa'}</code></li>
 <li>for student<br/>
-<code>{"name": "test", "type": "2", "emailId": "test@gmail.com", "password": "aaa"}</code></li></ul>
+<code>{'name': 'test', 'type': '2', 'emailId': 'test@gmail.com', 'password': 'aaa'}</code></li></ul>
 <li>Implement create course functionality which is a post method refer stubs for further information:<br/>
 <code>
 {
-    "name": "Java",
-    "category": "Programming Languages",
-    "oneLiner": "Java",
-    "duration": "1",
-    "language": "Java",
-    "description": "%3Cp%3EJava%20..%3C%2Fp%3E%20",
-    "lessons": [],
-    "photo":"photo blob text"
+    'name': 'Java',
+    'category': 'Programming Languages',
+    'oneLiner': 'Java',
+    'duration': '1',
+    'language': 'Java',
+    'description': '%3Cp%3EJava%20..%3C%2Fp%3E%20',
+    'lessons': [],
+    'photo':'photo blob text'
 }
 </code></li>
 <li>Implement update course functionality which is a post method refer stubs for further information<br/>
 <code>
 {
-    "id": "5b6c5a67e8e0a03b40e584e7",
-    "name": "Java",
-    "category": "Programming Languages",
-    "oneLiner": "Java",
-    "duration": "1",
-    "language": "Java",
-    "description": "%3Cp%3EJava%3C%2Fp%3E%20",
-    "lessons": [],
-    "photo":"blob data"
+    'id': '5b6c5a67e8e0a03b40e584e7',
+    'name': 'Java',
+    'category': 'Programming Languages',
+    'oneLiner': 'Java',
+    'duration': '1',
+    'language': 'Java',
+    'description': '%3Cp%3EJava%3C%2Fp%3E%20',
+    'lessons': [],
+    'photo':'blob data'
 }
 </code></li>
 <li>Implement delete course functionality which is a post method refer stubs for further information</li>
