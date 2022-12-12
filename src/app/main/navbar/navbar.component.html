@@ -1,43 +1,100 @@
 <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Angular
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" (click)="goToOta()">Online Test Application</a></li>
-                        <li><a class="dropdown-item" (click)="goToFba()">Blog Application</a></li>
-                        <li><a class="dropdown-item" (click)="goToTma()">3D Model Application</a></li>
-                    </ul>
-                </li>
-               
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ReactJS
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" (click)="goToEfa()">Event Finder Application</a></li>
-                        <li><a class="dropdown-item" (click)="goToPsa()">Pokemon Search Application</a></li>
-                    </ul>
-                </li>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Angular
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" (click)="goToOta()"
+                >Online Test Application</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="goToFba()">Blog Application</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="goToTma()"
+                >3D Model Application</a
+              >
+            </li>
+          </ul>
+        </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        NodeJS
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" (click)="goToLms()">Learning Management System</a></li>
-                        <li><a class="dropdown-item" (click)="goToOml()">Online Music Library Application</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <a class="mx-3" href="https://github.com/zvdas"><img src="../../../assets/GitHub-Mark.svg" width="34" height="34"></a>
-        <a class="mx-3" href="https://www.linkedin.com/in/judeson-brian-rodriguez-764439b5"><img src="../../../assets/linkedin.svg" width="34" height="34"></a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ReactJS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" (click)="goToEfa()"
+                >Event Finder Application</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="goToPsa()"
+                >Pokemon Search Application</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            NodeJS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" (click)="goToLms()"
+                >Learning Management System</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="goToOml()"
+                >Online Music Library Application</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToAbout()">About</a>
+        </li>
+      </ul>
     </div>
+    <a class="mx-3" href="https://github.com/zvdas"
+      ><img src="../../../assets/GitHub-Mark.svg" width="34" height="34"
+    /></a>
+    <a
+      class="mx-3"
+      href="https://www.linkedin.com/in/judeson-brian-rodriguez-764439b5"
+      ><img src="../../../assets/linkedin.svg" width="34" height="34"
+    /></a>
+  </div>
 </nav>

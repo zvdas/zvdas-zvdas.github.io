@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './main/about/about.component';
 import { HomeComponent } from './main/home/home.component';
 import { TemplateComponent } from './main/template/template.component';
 import { BlogAppComponent } from './technologies/angular/blog-app/blog-app.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'psa', component: PokemonSearchAppComponent},
   {path:'lms', component: LmsAppComponent},
   {path:'oml', component: OnlineMusicLibraryAppComponent},
+  {path:'about', component: AboutComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 ];
 
