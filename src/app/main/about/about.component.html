@@ -1,6 +1,19 @@
 <app-navbar></app-navbar>
 <!-- Toggle Button - Light/Dark Theme -->
 <div id="container--main">
+  <div class="form-check form-switch">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckDefault"
+      (click)="switchTheme($event)"
+    />
+    <label class="form-check-label" for="flexSwitchCheckDefault"
+      >Dark Theme</label
+    >
+  </div>
+
   <section id="wrapper--hero" class="section--page">
     <img id="profile-pic" src="../../../assets/IMG-20171130-WA0000.jpg" />
 
