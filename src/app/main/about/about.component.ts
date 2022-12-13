@@ -11,6 +11,12 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let hostStyle = document.documentElement.style;
+    hostStyle.setProperty('--mainTextColor-dark', '#000');
+    hostStyle.setProperty('--secondaryTextColor-dark', 'rgb(51 51 51)');
+    hostStyle.setProperty('--mainLinkColor-dark', '#0da2b8');
+    hostStyle.setProperty('--mainBorderColor-dark', 'rgb(218, 218, 218)');
+    hostStyle.setProperty('--mainBgColor-dark', 'rgb(249, 250, 251)');
   }
 
   switchTheme(e: any) {
