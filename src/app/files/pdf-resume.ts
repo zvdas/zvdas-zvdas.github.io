@@ -1,6 +1,6 @@
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';  
-import { Alignment, Decoration, Margins } from 'pdfmake/interfaces';
+import { Alignment, Decoration, Margins, UnorderedListType } from 'pdfmake/interfaces';
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs; 
 
 export function PdfResume() {
@@ -39,55 +39,61 @@ export function PdfResume() {
                 ul: [
                     'Angular',
                     {
-                        ul: [
-                                {
-                                    text: 'Online Test Application', 
-                                    decoration: 'underline' as Decoration,
-                                    // style: 'listSecondary',
-                                },
-                                // {
-                                    // text: 
-                                    `The Online Test Application enables users to provide online tests, review them, and
-                                    display the results. (Angular Application with JSON server for serving fake APIs)
-                                    GitHub URL containing project files : https://github.com/zvdas/OnlineTestApp`,
-                                // },
+                        ul: 
+                        [
+                            {
+                                listType: 'circle' as UnorderedListType,
+                                decoration: 'underline' as Decoration,
+                                text: 'Online Test Application', 
+                            },
+                            {
+                                listType: 'none' as UnorderedListType,
+                                text: 
+                                `The Online Test Application enables users to provide online tests, review them, and
+                                display the results. (Angular Application with JSON server for serving fake APIs)
+                                GitHub URL containing project files : https://github.com/zvdas/OnlineTestApp`,
+                            },
                         ]
                     },
                     'React',
                     {
-                        ul: [
-                                {
-                                    text: 'Event Finder Application', 
-                                    decoration: 'underline' as Decoration,
-                                    // style: 'listSecondary',
-                                },
-                                // {
-                                    // text: 
-                                    `The Event Finder App allows users to view and promote upcoming events. (React
-                                    Application with JSON server for serving fake APIs & Redux for state management)
-                                    GitHub URL containing project files : https://github.com/zvdas/EventFinderApp`,
-                                // },
+                        ul: 
+                        [
+                            {
+                                listType: 'circle' as UnorderedListType,
+                                decoration: 'underline' as Decoration,
+                                text: 'Event Finder Application', 
+                            },
+                            {
+                                listType: 'none' as UnorderedListType,
+                                text: 
+                                `The Event Finder App allows users to view and promote upcoming events. (React
+                                Application with JSON server for serving fake APIs & Redux for state management)
+                                GitHub URL containing project files : https://github.com/zvdas/EventFinderApp`,
+                            },
                         ]
                     },
                     'Node',
                     {
-                        ul: [
-                                {
-                                    text: 'Learning Management System', 
-                                    decoration: 'underline' as Decoration,
-                                    // style: 'listSecondary',
-                                },
-                                // {
-                                    // text: 
-                                    `The Learning Management System allows users to monitor and customize the
-                                    registration processes of e-learning curriculum, upload and manage documents
-                                    containing curricular content, deliver course content over web-based interfaces
-                                    (desktops, phones or tablets), create and publish course schedules, deadlines and tests
-                                    & create new courses and register the students. (Node.js with Express and MongoDB
-                                    serving as database)
-                                    GitHub URL containing project files :
-                                    https://github.com/zvdas/LearningManagementSystem`,
-                                // },
+                        ul: 
+                        [
+                            {
+                                listType: 'circle' as UnorderedListType,
+                                decoration: 'underline' as Decoration,
+                                text: 'Learning Management System', 
+                            },
+                            {
+                                listType: 'none' as UnorderedListType,
+                                text: 
+                                `The Learning Management System allows users to monitor and customize the
+                                registration processes of e-learning curriculum, upload and manage documents
+                                containing curricular content, deliver course content over web-based interfaces
+                                (desktops, phones or tablets), create and publish course schedules, deadlines and tests
+                                & create new courses and register the students. (Node.js with Express and MongoDB
+                                serving as database)
+                                GitHub URL containing project files :
+                                https://github.com/zvdas/LearningManagementSystem`,
+                            },
                         ]
                     },
                 ]
@@ -99,16 +105,25 @@ export function PdfResume() {
             },
             "Self-Learning from Online Courses",
             {
-                ul: [
-                    'Udemy',
+                ul: 
+                [
                     {
+                        decoration: 'underline' as Decoration,
+                        text: 'Udemy',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
                         ul: [
                             'CorelDRAW',
                             'Photoshop',
                         ]
                     },
-                    'Simplilearn Certified',
                     {
+                        decoration: 'underline' as Decoration,
+                        text: 'Simplilearn Certified',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
                         ul: [
                             'MEAN Stack Training (MongoDB, Express, Angular, React & NodeJS)',
                             'Cloud Architectures (AWS, Azure)',
@@ -117,51 +132,133 @@ export function PdfResume() {
                             'Data Science with Python',
                         ]
                     },
-                    "pdf generation incomplete; development in progress..."
-                    /*
-                        Work Experience
-                            ● Angular Wiki
-                            November 2022 to Present
-                            Frontend Web Development using Angular (with Angular Material).
-                            ● Power Engineering India Private Limited (Pai Kane Group) - Marketing Officer
-                            (Generators & Allied Power Products)
-                            March 2018 to March 2020
-                            Lead generation, design of brochures, banners, corporate presentations, etc., planning &
-                            organization of exhibitions.
-                            ● Paulo Motors - Job Controller
-                            (Automobile Repair & Service)
-                            February 2016 to December 2017
-                            Vehicle scheduling, liasioning of GPS & e-toll, documentation of service, maintenance, warranty,
-                            pre-delivery inspection of COmmercial Vehicles (Buses & Trucks).
-                            Achievements
-                            ● New product brand launch with marketing team at a local Interior Designing Exhibition, brochure
-                            design (from scratch), stall setup & layout, logistics coordination and product promotion.
-                            ● Lead generation (for company) from various sectors using internet search engines, web scraping
-                            tools (Selenium - python) and Excel.
-                        Educational Qualifications
-                            ● Vishwanathrao Deshpande Rural Institute of Technology, Haliyal, Karnataka
-                                Vishveshwarya Technical University - Bachelor’s of Mechanical Engineering
-                                September 2007 - January 2015
-                                Second Class
-                            ● Father Agnel Higher Secondary School, Verna, Goa
-                                HSSC (Goa Board)
-                                June 2006 - March 2007
-                                Second Class
-                            ● Gurugram Public School, Gurgaon, Haryana
-                                SSC (CBSE Board)
-                                June 2004 - March 2005
-                                First Class
-                        Personal Details
-                            ● Mobile number: 7972037493 (primary) | 9637112081
-                            ● E-mail Id: judeson_rodriguez@gmail.com (primary) | rodriguez_jude@hotmail.com
-                            ● LinkedIn URL : https://www.linkedin.com/in/judeson-brian-rodriguez-764439b5
-                            ● Github URL : https://github.com/zvdas
-                            ● Portfolio URL : https://zvdas.github.io
-                            ● Location: Panaji, Goa
-                            ● Date of Birth : 9th October, 1989
-                        */
                 ]
-            }
+            },
+            '\n',
+            {
+                style: 'titleSecondary',
+                text: 'Work Experience',
+            },
+            {
+                ul: 
+                [
+                    {
+                        decoration: 'underline' as Decoration,
+                        text: 'Angular Wiki',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul: [
+                            'Category: Web Development',
+                            'Designation: SDE Intern',
+                            'Timeline: November 2022 to Present',
+                            'Duties: Frontend Web Development using Angular (with Angular Material)',
+                        ]
+                    },
+                    {
+                        decoration: 'underline' as Decoration,
+                        text: 'Power Engineering India Private Limited (Pai Kane Group)',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul:
+                        [
+                            'Category: Generators & Allied Power Products',
+                            'Designation: Marketing Officer',
+                            'Timeline: March 2018 to March 2020',
+                            `Duties: Lead generation, design of brochures, banners, corporate presentations, etc., planning &
+                            organization of exhibitions.`,
+
+                        ]
+                    },
+                    {
+                        decoration: 'underline' as Decoration,
+                        text: 'Paulo Motors',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul:
+                        [
+                            'Category: Automobile Repair & Service',
+                            'Designation: Job Controller',
+                            'Timeline: February 2016 to December 2017',
+                            `Duties: Vehicle scheduling, liasioning of GPS & e-toll, documentation of service, maintenance, 
+                            warranty, pre-delivery inspection of Commercial Vehicles (Buses & Trucks).`,
+                        ]
+                    },
+                ],
+            },
+            "\n",
+            {
+                style: 'titleSecondary',
+                text: 'Achievements',
+            },
+            {
+                ul: 
+                [
+                    'New product brand launch with marketing team at a local Interior Designing Exhibition, brochure design (from scratch), stall setup & layout, logistics coordination and product promotion.',
+                    'Lead generation (for company) from various sectors using internet search engines, web scraping tools (Selenium - python) and Excel.',
+                ]
+            },
+            "\n",
+            {
+                style: 'titleSecondary',
+                text: 'Educational Qualifications',
+            },
+            {
+                ul: 
+                [
+                    'Vishwanathrao Deshpande Rural Institute of Technology, Haliyal, Karnataka',
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul: 
+                        [
+                            `Vishveshwarya Technical University - Bachelor's of Mechanical Engineering`,
+                            'September 2007 - January 2015',
+                            'Second Class',
+                        ]
+                    },
+                    'Father Agnel Higher Secondary School, Verna, Goa',
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul: 
+                        [
+                            'HSSC (Goa Board)',
+                            'June 2006 - March 2007',
+                            'Second Class',
+                        ]
+                    },
+                    'Gurugram Public School, Gurgaon, Haryana',
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul:
+                        [
+                            'SSC (CBSE Board)',
+                            'June 2004 - March 2005',
+                            'First Class',
+                        ]
+                    },
+                ]
+            },
+            "\n",
+            {
+                style: 'titleSecondary',
+                text: 'Personal Details',
+            },
+            {
+                ul: 
+                [
+                    // 'Mobile number: 7972037493 (primary) | 9637112081',
+                    // 'E-mail Id: judeson.rodriguez@gmail.com (primary) | rodriguez_jude@hotmail.com',
+                    'E-mail Id: judeson.rodriguez@gmail.com',
+                    'LinkedIn URL : https://www.linkedin.com/in/judeson-brian-rodriguez-764439b5',
+                    'Github URL : https://github.com/zvdas',
+                    'Portfolio URL : https://zvdas.github.io',
+                    'Location: Panaji, Goa',
+                    // 'Date of Birth : 9th October, 1989',
+                ]
+            },
+            // "pdf generation incomplete; development in progress..."
         ],
         styles: {
             titleMain: {
@@ -180,7 +277,7 @@ export function PdfResume() {
             },
             listSecondary: {
                 markerColor: 'white',
-            }
+            },
         },
         defaultStyle: {
             fontSize: 11,
