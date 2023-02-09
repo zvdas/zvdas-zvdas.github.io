@@ -172,9 +172,40 @@
             "project_name":"Online Music Store - Manage your personal Music library",
             "problem": "<p><strong>Description</strong><br/>In this project, you are required to design an online music store that will enable the client to mobilize their business by allowing a customer to purchase different music related items directly from the website. The website should be dynamic and user centric to attract more customers that will eventually increase the revenue for the client</p>",
             "message": "<p class='text-white'>Click <a class='text-white' href='https://oms-n7hw.onrender.com'><b>here</b></a> to go to the project. The website may take upto two minutes to load.</p>",
-            "screenshots":[],
-            "code":"",
-            "procedure":""
+            "screenshots":[
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-001.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-002.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-003.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-004.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-005.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-006.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-007.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-008.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-009.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-010.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-011.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-012.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-013.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-014.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-015.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-016.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-017.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-018.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-019.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-020.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-021.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-022.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-023.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-024.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-025.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-026.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-027.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-028.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-029.png",
+                "https://raw.githubusercontent.com/zvdas/OnlineMusicStore/main/screenshots/screenshot-030.png"
+            ],
+            "code":"<head><script src='https://gist.github.com/zvdas/b9927c74970b7c27aef1717c48db58f5.js'></script><head><body>",
+            "procedure":"in progress..."
         }
     ]
 }
