@@ -1,7 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Project } from 'src/app/classes/project/project';
 
-import project_json from 'src/app/files/project.json';
+import project_json from 'src/assets/files/project.json';
 
 @Injectable({
   providedIn: 'root'
@@ -10,20 +11,23 @@ import project_json from 'src/app/files/project.json';
 export class ProjectService {
 
   project: Project[] = project_json.project;
-  numMessage!: number;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getData(){
+  getData() {
     return this.project;
   }
 
-  setNumber(number: number){
-    this.numMessage = number;
+  getJsonFile() {
+    return this.http.get('assets/files/project.json', {responseType: 'text'});
   }
 
-  getNumber(){
-    return this.numMessage;
+  getProblem(index: number) {
+    return this.http.get(JSON.parse(JSON.stringify(this.project[index]))['problem_link'], {responseType: 'text'});
+  }
+
+  getWriteup(index: number) {
+    return this.http.get(JSON.parse(JSON.stringify(this.project[index]))['procedure_link'], {responseType: 'text'});
   }
 
 }
