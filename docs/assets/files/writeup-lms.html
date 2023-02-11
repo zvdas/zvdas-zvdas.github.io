@@ -1,0 +1,42 @@
+<ul>
+<li>Create a folder called lms to store the backend files & folders by entering the following command in terminal<br/>
+<code>mkdir lms</code></li>
+<li>Enter into the lms folder by entering the following command in terminal<br/>
+<code>cd lms</code></li>
+<li>Initialize the directory by entering the following command in terminal<br/>
+<code>npm init -y</code></li>
+<li>Check the current versions of node & npm in the local system by entering the following command in terminal<br/>
+<code>node -v</code><br/>
+<code>npm -v</code></li>
+<li>The version of Node in the local machine is<strong>v16.13.0</strong> & The version of npm (node package manager) in the local machine is<strong>8.3.0</strong></li>
+<li>install the required packages (latest) by entering the following commands in the terminal<br/>
+<code>npm i --save mongodb express nodemon multer bootstrap pug</code><br/>
+<ul>
+    <li>Mongodb: connects to MongoDB collection & performs database operations</li>
+    <li>Express: connects to backend service to serve HTML & CSS files & JavaScript logic files and listens on a port specified by user</li>
+    <li>Nodemon: automatically incorporate changes to js files without the need to stop and restart the server each time a change is made to the files</li>
+    <li>Multer: uploads files to storage if mentioned, else as a file URL</li>
+    <li>Bootstrap: RWD (Responsive Web Design) & pre-defined CSS (SASS) styling formats</li>
+    <li>Pug: template engine used to render dynamic web pages</li>
+</ul></li>
+<li>add 'start': 'nodemon app.js' to 'scripts' section of package.json</li>
+<li>Start express by entering the following command in the terminal<br/>
+<code>npm start</code></li>
+<li>The homepage will be displayed in the browser at http://localhost:{port_number}</li>
+<li>Setup the routes<br/>
+Setup routing for user & course. The user route will contain all the routes for views like registration, login, edit user and navbar and the course route will contain all the routes for views like course update, course delete and dashboard. The routing will be added to app.js as middleware.</li>
+<li>Create the Models<br/>
+Setup the models for user & course. The model will structure the data while performing CRUD operations.</li>
+<li>Create the Static Views<br/>
+Create the static views in HTML (including forms) for all the tasks (registration & login, create user, create course, etc.)</li>
+<li>Create the Dynamic Views<br/>
+Dynamic views require a template engine like EJB or PUG. The HTML file has to be reformatted as PUG implements indentation instead of tags. Template engines can render dynamic content easily.</li>
+<li>Set the 'views' to 'dynamic' in the app.js file & provide the path to the pug files</li>
+<li>Create the controllers for user & course. This will include the various functions to perform CRUD from the form through the model template.</li>
+<li>Multer will be used as an addition to the route for courses in the POST method to upload images when the button is clicked. Logic is also provided to convert the file into a base64 string to send to the database.</li>
+<li>Create the Configuration file to connect to MongoDB<br/>
+This will contain details of the database URL, database name, collection names. To protect the database URL, .env file can be referenced which will reside only on the local system.</li>
+<li>Once connected to the database, the following message will be displayed in console<br/>
+<code>'Connected to MongoDB in Express'</code></li>
+<li>The API operations are performed using Postman, an API service (since only GET can be performed in browser). However, in this project, to maintain the security, APIs have been disabled. The data whatever is displayed in the pug files/website are the same that will be trasmitted over API.</li>
+</ul>

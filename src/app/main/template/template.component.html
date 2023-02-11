@@ -6,7 +6,6 @@
     
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
-            <!-- <div *ngFor="let screenshot of project.screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'" style="height: 500px;"> -->
             <div *ngFor="let screenshot of screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'" style="height: 500px;">
                 <img src={{screenshot}} class="d-block w-100" alt="...">
             </div>

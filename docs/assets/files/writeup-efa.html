@@ -1,0 +1,92 @@
+<p><strong>Step 1 : Install the necessary dependencies</strong><br/>
+Install the following libraries using npm
+<ul><li>react-router-dom : enable routing in React</li>
+<li>react-redux : enable redux for state management in Redux</li>
+<li>react-redux-thunk : enable redux with asynchronous ability (for CRUD using Redux)</li>
+<li>axios : make API calls</li>
+<li>bootstrap : enable RWD (responsive web design)</li></ul>
+<code>npm i react-router-dom react-redux redux redux-thunk axios bootstrap</code><br/>
+Create the react app by entering the following in terminal<br/>
+<code>npx create-react-app event-finder-app</code></p>
+<p><strong>Step 2 : Project Folder Structure</strong><br/>
+In the src folder, create the folders, subfolders and subfolders in the following structure<br/>
+<ul><li>event_module</li>
+<ul><li>components</li>
+<ol><li>add_event.js : form with logic to create an event</li>
+<li>credits.js : attribute links for pictures used</li>
+<li>navbar.js : navbar with routing links</li>
+<li>page_default.js : link to navbar component</li>
+<li>search_event.js : logic to find events by ID, date & venue, with options to update & delete</li>
+<li>show_events.js : logic to display events with pagination options</li>
+<li>update_event.js: form with logic to update an event</li></ol>
+<li>database_files</li>
+<ol><li>events.json : data for dummy API for CRUD</li></ol>
+<li>redux</li>
+<ol><li>actions</li>
+<ol><li>event_actions.js : function definitions to implement CRUD methods</li>
+<li>event_methods.js : methods with types & payloads</li>
+<li>event_types.js : types of events</li></ol>
+<li>reducers</li>
+<ol><li>combine_reducer.js : combine all reducers</li>
+<li>event_reducer.js : reducer function for different types of API calls</li></ol>
+<li>store.js : configure redux store with reducer parameters & apply thunk middleware</li></ol>
+<li>services</li>
+<ol><li>event-services.js : API URLs & functions</li></ol></ul></p>
+<p><strong>Step 3 : Launch React App</strong><br/>
+Launch the React app on default port (3000) by entering the following in terminal<br/>
+<code>npm start</code>
+launch the link localhost:3000 in a new browser</p>
+<p><strong>Step 4 : Launch JSON server</strong><br/>
+Setup json server to serve the database json file on port 4000, as 3000 is in use by React<br/>
+<code>json-server --watch .\src\user_defined\database_files\events.json --port 4000</code><br/>
+import bootstrap css & bootstrap bundle in app.js to enable bootstrap<br/>
+<code>import 'bootstrap/dist/css/bootstrap.min.css';</code>
+<code>import 'bootstrap/dist/js/bootstrap.bundle.min';</code>
+Add photo as background image (additional but not necessary)</p>
+<p><strong>Step 5 : Configure Redux Store & logic for State Management</strong><br/>
+Add the store as a provider for App.js which contains the logic for all the components to display 
+in the browser. This will enable state management in all the components referenced in App.js and below (children).<br/>
+<strong><u>Configure Event Actions</u></strong><br>
+Add the API URL of the fake API (json server) to the environment variables. Enter the API calls for 
+different CRUD methods in event-services.js, which will connect the buttons in the application to the 
+different CRUD methods like get (retrieve data), post (send data), put (update data) & delete (delete data). 
+Enter the different event action types for the reducer function. Also add the mapToProps constant which
+will update the state of the component for each method call in each component. Add the event methods with 
+data types and payloads for the reducer function. Whatever option is matched in the switch function of the 
+reducer to the event types will return the respective payload. The event actions will map the data type and 
+payload to the axios API methods mentioned in event_services.js and dispatch it to the store, where the state 
+is updated and retrieved in the components accordingly<br/>
+<strong><u>Configure Event Reducers</u></strong><br/>
+Create a reducer function which sets the initial state as an empty array (multiple values) and uses a
+switch function to match event types to event_actions.js & event_methods.js to return the state (if
+required) and the respective data payload. If there are multiple reducer functions for different tasks, like 
+authorization/login then combine_reducer combines all the reducer functions into a single reducer function which 
+can be used to create the store<br/>
+<strong><u>Configure Redux Store</u></strong><br/>
+create the store with thunk middleware using the combine reducer</p>
+<p><strong>Step 6 : Configure Components (view logic)</strong><br/>
+page_default.js contains the business logic to display the navbar.<br/>
+<strong><u>Navbar</u></strong><br/>
+Logic to display the navbar with the selected component information<br/>
+<strong><u>Create</u></strong><br/>
+Use forms to send the data to the API server with connect to connect to the redux store and bootstrap
+classes for RWD. The function createEvent along with other functions to be executed during runtime can
+be attached as onClick button events, which have to be bound to the functions to reflect changes
+without reverting.<br/>
+<strong><u>Read</u></strong><br/>
+the data to be read or retrieved and displayed in browser is in the form of an array, hence using index
+and pagination with a list mapping will allow displaying the data in a neat and arranged manner
+(aesthetically pleasing).<br/>
+<strong><u>Find/Search</u></strong><br/>
+Create the logic to search by ID, date & venue, depending on the option chosen by utilizing dropdown.
+The data retrieved will be an object in case of ID & array (single or multiple lines) in case of venue or
+date. If statement can be used to match the data to the presentation format. For each record displayed,
+there is an update and delete button.<br/>
+<strong><u>Update</u></strong><br/>
+If the update button is clicked, then the logic redirects the user to the update page, where the data in
+the current record is shown in a fixed box, with blank fields for the data to be updated.<br/>
+<strong><u>Delete</u></strong><br/>
+The delete logic is contained in search_event.js, when the delete button is clicked, the respective
+function is called in event_methods.js.<br/>
+<strong><u>Credits</u></strong><br/>
+Details of references used for pictures referenced in website<br/></p>

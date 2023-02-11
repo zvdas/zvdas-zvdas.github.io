@@ -1,0 +1,58 @@
+<p><strong>Description</strong></p>
+<p>
+  In the world of pokemon, where the user should be able to search for different
+  pokemons, you have to create an application to search them with the following
+  functionalities:
+</p>
+<ul>
+  <li>
+    The Pokemon application should have the list of pokemon details which will
+    be provided in the form of JSON data i.e., it should have name, image, CP,
+    attack, defense type etc.
+  </li>
+  <li>
+    It should have a search bar so that user can search the pokemon based on the
+    name of pokemon.
+  </li>
+  <li>
+    Since we have many pokemon, apply pagination, so that user can only see 10
+    pokemon at a time.
+  </li>
+</ul>
+<p><strong>Pagination</strong></p>
+<img src="../../../assets/Screenshot from 2020-07-01 17-42-36.jpg" />
+<p><strong>Search Bar</strong></p>
+<img src="../../../assets/Screenshot from 2020-07-01 17-44-41.jpg" />
+<p><strong>Note:</strong></p>
+<ul>
+  <li>
+    Pagination should have 'page current-page of Total pages'. For example: page
+    50 of 100
+  </li>
+  <ul>
+    <li>
+      The total pages should be calculated based on the JSON data provided.
+    </li>
+    <li>
+      And the current page is calculated based on the page, the user is in,
+      currently.
+    </li>
+    <li>
+      Pagination should have id='pagination', which should contain the details
+      as listed above.
+    </li>
+    <li>
+      The previous button should be disabled if it is in the first page and it
+      should have id='previous'.
+    </li>
+    <li>
+      Next button, should show next set of pokemon (which is 10 pokemon on a
+      click) and should have id='next'.
+    </li>
+  </ul>
+  <li>Search bar should have an id='search'.</li>
+  <li>
+    Pokemon's name should be inside the span tag (or any other tag) which should
+    have id='name'.
+  </li>
+</ul>

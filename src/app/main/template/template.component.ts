@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/classes/project/project';
 import { ProjectService } from 'src/app/services/project/project.service';
@@ -9,8 +9,8 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./template.component.css']
 })
 
-export class TemplateComponent implements OnInit, AfterViewInit {
-  @ViewChild('iframe') iframe!: ElementRef;
+export class TemplateComponent implements OnInit {
+  @ViewChild('iframe', {static: true}) iframe!: ElementRef;
 
   project: Project = {} as Project;
   t:number = NaN;
@@ -22,7 +22,7 @@ export class TemplateComponent implements OnInit, AfterViewInit {
     route.paramMap.subscribe(x => {
       this.t = parseInt(x.get('id')!);
       this.ngOnInit();
-      this.ngAfterViewInit();
+      setTimeout(() => this.setIframe());
     })
   }
 
@@ -33,7 +33,7 @@ export class TemplateComponent implements OnInit, AfterViewInit {
     this.getSelectedWriteup(this.t);
   }
   
-  ngAfterViewInit(): void {
+  setIframe() {
     const doc = this.iframe.nativeElement.contentDocument;
     doc.open();
     doc.write(this.project.code);
