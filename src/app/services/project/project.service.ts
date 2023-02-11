@@ -14,8 +14,12 @@ export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
+  getAllProjects() {
     return this.project;
+  }
+
+  getProjectByIndex(index: number) {
+    return this.project[index];
   }
 
   getJsonFile() {
@@ -28,6 +32,14 @@ export class ProjectService {
 
   getWriteup(index: number) {
     return this.http.get(JSON.parse(JSON.stringify(this.project[index]))['procedure_link'], {responseType: 'text'});
+  }
+
+  getScreenshots(index: number) {
+    const project = this.project[index];
+    const screenshots = JSON.parse(JSON.stringify(project))['screenshots_count'];
+    const app = JSON.parse(JSON.stringify(project))['screenshots_app'];
+    const branch = JSON.parse(JSON.stringify(project))['screenshots_branch'];
+    return screenshots.map((x:number) => `https://raw.githubusercontent.com/zvdas/${app}/${branch}/screenshots/screenshot_${x.toString().padStart(3, "0")}.png`);
   }
 
 }
