@@ -1,7 +1,7 @@
 import * as pdfMake from 'pdfmake/build/pdfmake';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';  
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { Alignment, Decoration, Margins, UnorderedListType } from 'pdfmake/interfaces';
-(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs; 
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
 export function PdfResume() {
     let docDefinition = {
@@ -25,9 +25,9 @@ export function PdfResume() {
             },
             {
                 text: `Have gained good exposure to understand various aspects of Web Development through
-                 Master's Program which has developed a great sense of confidence at a very personal level. 
-                 Hence, I seek a challenging position in the area of Web Development, Hosting (DevOps) & related 
-                 fields where I can share my skills and expand my capabilities further in the pursuit of 
+                 Master's Program which has developed a great sense of confidence at a very personal level.
+                 Hence, I seek a challenging position in the area of Web Development, Hosting (DevOps) & related
+                 fields where I can share my skills and expand my capabilities further in the pursuit of
                  progressive career advancement.`,
             },
             "\n",
@@ -39,16 +39,16 @@ export function PdfResume() {
                 ul: [
                     'Angular',
                     {
-                        ul: 
+                        ul:
                         [
                             {
                                 listType: 'circle' as UnorderedListType,
                                 decoration: 'underline' as Decoration,
-                                text: 'Online Test Application', 
+                                text: 'Online Test Application',
                             },
                             {
                                 listType: 'none' as UnorderedListType,
-                                text: 
+                                text:
                                 `The Online Test Application enables users to provide online tests, review them, and
                                 display the results. (Angular Application with JSON server for serving fake APIs)
                                 GitHub URL containing project files : https://github.com/zvdas/OnlineTestApp`,
@@ -57,16 +57,16 @@ export function PdfResume() {
                     },
                     'React',
                     {
-                        ul: 
+                        ul:
                         [
                             {
                                 listType: 'circle' as UnorderedListType,
                                 decoration: 'underline' as Decoration,
-                                text: 'Event Finder Application', 
+                                text: 'Event Finder Application',
                             },
                             {
                                 listType: 'none' as UnorderedListType,
-                                text: 
+                                text:
                                 `The Event Finder App allows users to view and promote upcoming events. (React
                                 Application with JSON server for serving fake APIs & Redux for state management)
                                 GitHub URL containing project files : https://github.com/zvdas/EventFinderApp`,
@@ -75,16 +75,16 @@ export function PdfResume() {
                     },
                     'Node',
                     {
-                        ul: 
+                        ul:
                         [
                             {
                                 listType: 'circle' as UnorderedListType,
                                 decoration: 'underline' as Decoration,
-                                text: 'Learning Management System', 
+                                text: 'Learning Management System',
                             },
                             {
                                 listType: 'none' as UnorderedListType,
-                                text: 
+                                text:
                                 `The Learning Management System allows users to monitor and customize the
                                 registration processes of e-learning curriculum, upload and manage documents
                                 containing curricular content, deliver course content over web-based interfaces
@@ -105,7 +105,7 @@ export function PdfResume() {
             },
             "Self-Learning from Online Courses",
             {
-                ul: 
+                ul:
                 [
                     {
                         decoration: 'underline' as Decoration,
@@ -140,7 +140,7 @@ export function PdfResume() {
                 text: 'Work Experience',
             },
             {
-                ul: 
+                ul:
                 [
                     {
                         decoration: 'underline' as Decoration,
@@ -182,7 +182,7 @@ export function PdfResume() {
                             'Category: Automobile Repair & Service',
                             'Designation: Job Controller',
                             'Timeline: February 2016 to December 2017',
-                            `Duties: Vehicle scheduling, liasioning of GPS & e-toll, documentation of service, maintenance, 
+                            `Duties: Vehicle scheduling, liasioning of GPS & e-toll, documentation of service, maintenance,
                             warranty, pre-delivery inspection of Commercial Vehicles (Buses & Trucks).`,
                         ]
                     },
@@ -194,7 +194,7 @@ export function PdfResume() {
                 text: 'Achievements',
             },
             {
-                ul: 
+                ul:
                 [
                     'New product brand launch with marketing team at a local Interior Designing Exhibition, brochure design (from scratch), stall setup & layout, logistics coordination and product promotion.',
                     'Lead generation (for company) from various sectors using internet search engines, web scraping tools (Selenium - python) and Excel.',
@@ -206,12 +206,12 @@ export function PdfResume() {
                 text: 'Educational Qualifications',
             },
             {
-                ul: 
+                ul:
                 [
                     'Vishwanathrao Deshpande Rural Institute of Technology, Haliyal, Karnataka',
                     {
                         type: 'circle' as UnorderedListType,
-                        ul: 
+                        ul:
                         [
                             `Vishveshwarya Technical University - Bachelor's of Mechanical Engineering`,
                             'September 2007 - January 2015',
@@ -221,7 +221,7 @@ export function PdfResume() {
                     'Father Agnel Higher Secondary School, Verna, Goa',
                     {
                         type: 'circle' as UnorderedListType,
-                        ul: 
+                        ul:
                         [
                             'HSSC (Goa Board)',
                             'June 2006 - March 2007',
@@ -246,7 +246,7 @@ export function PdfResume() {
                 text: 'Personal Details',
             },
             {
-                ul: 
+                ul:
                 [
                     // 'Mobile number: 7972037493 (primary) | 9637112081',
                     // 'E-mail Id: judeson.rodriguez@gmail.com (primary) | rodriguez_jude@hotmail.com',
@@ -254,7 +254,8 @@ export function PdfResume() {
                     'LinkedIn URL : https://www.linkedin.com/in/judeson-brian-rodriguez-764439b5',
                     'Github URL : https://github.com/zvdas',
                     'Portfolio URL : https://zvdas.github.io',
-                    'Location: Panaji, Goa',
+                    'Location: Bengaluru, Karnataka',
+                    // 'Location: Panaji, Goa',
                     // 'Date of Birth : 9th October, 1989',
                 ]
             },
