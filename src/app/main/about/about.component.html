@@ -2,7 +2,10 @@
 <div id="container--main">
   <section id="wrapper--hero" class="section--page">
     <!-- <img id="profile-pic" src="../../../assets/IMG-20171130-WA0000.jpg" /> -->
-    <img id="profile-pic" src="../../../assets/Jude Brian Rodriguez Professional Photo.png" />
+    <img
+      id="profile-pic"
+      src="../../../assets/Jude Brian Rodriguez Professional Photo.png"
+    />
 
     <div>
       <h1 id="user-name">Judeson Brian Caleb Rodriguez</h1>
@@ -30,9 +33,7 @@
         target="_blank"
         >LinkedIn</a
       >
-      <a
-        href="https://www.facebook.com/rodriguezzude"
-        target="_blank"
+      <a href="https://www.facebook.com/rodriguezzude" target="_blank"
         >Facebook</a
       >
       <a href="https://github.com/zvdas" target="_blank">GitHub</a>
@@ -52,7 +53,7 @@
 
     <div id="wrapper--techstack__items">
       <div *ngFor="let stack of techStack" class="card--techstack">
-        <span>{{stack}}</span>
+        <span>{{ stack }}</span>
       </div>
     </div>
   </section>
@@ -83,30 +84,51 @@
       <h2>Projects & Accomplishments</h2>
 
       <div class="card--project">
-        <a href="project1.html"
-          ><span>🏆 </span>Food blog application in Angular with Firebase
-          using Firestore as Database</a
-        >
-      </div>
-
-      <div class="card--project">
-        <a href="project1.html"
+        <a href="#/details/0/ota"
           ><span>🏆 </span>Online quiz application in Angular with Firebase
           using Firestore as Database</a
         >
       </div>
 
       <div class="card--project">
-        <a href="project1.html"
-          ><span>🏆 </span>Event finder application in React with Firebase
+        <a href="#/details/1/fba"
+          ><span>🏆 </span>Food blog application in Angular with Firebase using
+          Firestore as Database</a
+        >
+      </div>
+
+      <div class="card--project">
+        <a href="#/details/2/tma"
+          ><span>🏆 </span>3D model application in Angular with Firebase using
+          Firestore as Database</a
+        >
+      </div>
+
+      <div class="card--project">
+        <a href="#/details/3/efa"
+          ><span>🏆 </span>Event finder application in React with Firebase using
+          Firestore as Database & Redux as State Management</a
+        >
+      </div>
+
+      <div class="card--project">
+        <a href="#/details/4/psa"
+          ><span>🏆 </span>Pokemon search application in React with Firebase
           using Firestore as Database & Redux as State Management</a
         >
       </div>
 
       <div class="card--project">
-        <a href="project1.html"
-          ><span>🏆 </span>Pokemon search application in React with Firebase
-          using Firestore as Database & Redux as State Management</a
+        <a href="#/details/5/lms"
+          ><span>🏆 </span>Learning Management System in Express with MongoDB as
+          Database</a
+        >
+      </div>
+
+      <div class="card--project">
+        <a href="#/details/6/oms"
+          ><span>🏆 </span>Online Music Store Application in Express with
+          MongoDB as Database</a
         >
       </div>
     </section>
