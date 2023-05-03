@@ -9,6 +9,9 @@ import { PdfResume } from 'src/app/files/pdf-resume';
 
 export class AboutComponent implements OnInit {
 
+  techStack: string[] = ['JavaScript','NodeJS','Express','React','Angular','Bootstrap','Angular Material','MongoDB','MySQL','REST APIs','Swagger'];
+  // Python,Django,Flask,FastAPI,Next JS
+
   constructor() { }
 
   ngOnInit(): void {
