@@ -144,7 +144,7 @@ export function PdfResume() {
                 [
                     {
                         decoration: 'underline' as Decoration,
-                        text: 'Maargvani It Soultions Pvt Ltd (Angular Wiki)',
+                        text: 'Maargvani IT Solutions Private Limited (Angular Wiki)',
                     },
                     {
                         type: 'circle' as UnorderedListType,
