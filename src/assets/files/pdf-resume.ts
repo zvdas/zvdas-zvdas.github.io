@@ -144,7 +144,7 @@ export function PdfResume() {
                 [
                     {
                         decoration: 'underline' as Decoration,
-                        text: 'Angular Wiki',
+                        text: 'Maargvani It Soultions Pvt Ltd (Angular Wiki)',
                     },
                     {
                         type: 'circle' as UnorderedListType,
@@ -152,7 +152,7 @@ export function PdfResume() {
                             'Category: Web Development',
                             'Designation: SDE Intern',
                             'Timeline: November 2022 to Present',
-                            'Duties: Frontend Web Development using Angular (with Angular Material)',
+                            'Duties: Frontend Web Development using Angular (with Angular Material & Tailwind CSS)',
                         ]
                     },
                     {
