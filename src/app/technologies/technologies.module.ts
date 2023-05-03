@@ -7,7 +7,7 @@ import { ThreedAppComponent } from './angular/threed-app/threed-app.component';
 import { EventFinderAppComponent } from './react/event-finder-app/event-finder-app.component';
 import { PokemonSearchAppComponent } from './react/pokemon-search-app/pokemon-search-app.component';
 import { LmsAppComponent } from './nodejs/lms-app/lms-app.component';
-import { OnlineMusicLibraryAppComponent } from './nodejs/online-music-library-app/online-music-library-app.component';
+import { OmsAppComponent } from './nodejs/oms-app/oms-app.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { OnlineMusicLibraryAppComponent } from './nodejs/online-music-library-ap
     EventFinderAppComponent,
     PokemonSearchAppComponent,
     LmsAppComponent,
-    OnlineMusicLibraryAppComponent
+    OmsAppComponent
   ],
   imports: [
     CommonModule,

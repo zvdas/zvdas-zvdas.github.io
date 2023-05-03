@@ -1,0 +1,205 @@
+<strong>Step 1: Create The Project Structure</strong>
+<ul>
+  <li>
+    Create a folder called <i>backend_nodejs_v1</i> to store the backend files &
+    folders by entering the following command in terminal<br />
+    <code>mkdir backend_nodejs_v1</code>
+  </li>
+  <li>
+    Enter into the <i>backend_nodejs_v1</i> folder by entering the following
+    command in terminal<br />
+    <code>cd backend_nodejs_v1</code>
+  </li>
+  <li>
+    Initialize the directory by entering the following command in terminal<br />
+    <code>npm init -y</code>
+  </li>
+  <li>
+    Check the current versions of node & npm in the local system by entering the
+    following command in terminal<br />
+    <code>node -v</code><br />
+    <code>npm -v</code>
+  </li>
+  <li>
+    The version of Node in the local machine is <i>v16.13.0</i> & The version of
+    npm (node package manager) in the local machine is <i>8.3.0</i>
+  </li>
+</ul>
+
+<strong>Step 2: Install the Necessary Dependencies</strong>
+<ol>
+  The Following packages will be installed in this project
+  <li>
+    Bcrypt: password-hashing function to create and decrypt json web tokens
+  </li>
+  <li>
+    Body Parser: parses the incoming request bodies in a middleware before
+    handling
+  </li>
+  <li>Colors: get color and style in console</li>
+  <li>
+    Cookie Parser: basic HTTP cookie parser and serializer for HTTP servers
+  </li>
+  <li>
+    CORS: enable CORS (Cross-origin Resource Sharing) with various options
+  </li>
+  <li>
+    Dotenv: zero-dependency module that loads environment variables from a .env
+    file into process.env
+  </li>
+  <li>
+    Express: connects to backend service to serve HTML & CSS files & JavaScript
+    logic files and listens on a port specified by user
+  </li>
+  <li>EJS: template engine used to render dynamic web pages</li>
+  <li>
+    Express File upload: uploads files to storage (uploaded file are accessible
+    from req.files)
+  </li>
+  <li>
+    Express Mongo Sanitize: sanitize express payload to prevent MongoDB injector
+    operation
+  </li>
+  <li>
+    Express Rate Limit: limits repeated requests to public APIs and/or endpoints
+    such as password reset
+  </li>
+  <li>Express Session: create a session middleware with custom options</li>
+  <li>Helmet: secure express apps by setting various HTTP headers</li>
+  <li>HPP: protect against HTTP Parameter Pollution attacks</li>
+  <li>Json Web Token: encrypt and decrypt json web tokens</li>
+  <li>
+    Method Override: supports the usage of PUT or DELETE requests in forms
+  </li>
+  <li>
+    Mongoose: provides a straight-forward, schema-based solution to model
+    application data.
+  </li>
+  <li>Morgan: HTTP request logger middleware for node.js</li>
+  <li>Node Mailer:</li>
+  <li>
+    Nodemon: automatically incorporate changes to js files without the need to
+    stop and restart the server each time a change is made to the files
+  </li>
+  <li>Slugify: slugify (substitute text) in a string</li>
+  <li>
+    Swagger JS Doc: reads JSDoc-annotated source code and generates an OpenAPI
+    (Swagger) specification
+  </li>
+  <li>
+    Swagger UI Express: serve auto-generated swagger-ui generated API docs from
+    express, based on a swagger.json file
+  </li>
+  <li>XSS Clean: sanitize user input to prevent cross-side-scripting</li>
+</ol>
+<ul>
+  <li>
+    Install the following packages (latest) by entering the names following 'npm
+    install' or 'npm i' in the terminal<br />
+    <code> npm i bcryptjs body-parser colors ... xss-clean </code><br />
+  </li>
+</ul>
+
+<strong>Step 3: Start the Project</strong>
+<ul>
+  <li>Add 'start': 'nodemon server.js' to 'scripts' section of package.json</li>
+  <li>
+    Start express by entering the following command in the terminal<br />
+    <code>npm start</code>
+  </li>
+  <li>
+    The homepage will be displayed in the browser at
+    http://localhost:{port_number}
+  </li>
+</ul>
+
+<strong>Step 4: Configure the MongoDB database</strong>
+<ul>
+  <li>
+    Create the Configuration file to connect to MongoDB, which will contain
+    details of the database URL, database name, collection names, all stored in
+    the connection string, available in the mongodb cloud account. To protect
+    the database URL, .env file can be referenced which will reside only on the
+    local system.
+  </li>
+  <li>
+    Once connected to the database, the following message will be displayed in
+    console<br />
+    <code>'Connected to MongoDB in Express'</code>
+  </li>
+</ul>
+
+<strong>Step 5: Create the Models</strong>
+<ul>
+  <li>
+    The model will structure the data while performing CRUD operations. Setup
+    the models for album, track, review & user using mongoose schema. Define the
+    field names with datatypes and any restrictions, like required, minlength,
+    maxlength, etc. Also reference IDs of any field to be populated from another
+    model using foreign key. Pre and post can be used to execute functions
+    before / after saving or deleting to/from the MongoDB database.
+  </li>
+</ul>
+
+<strong>Step 6: Create the Controllers</strong>
+<ul>
+  <li>
+    Create the controllers for albums, tracks, models, reviews & auth. This will
+    include the various functions to perform CRUD operations from the form
+    through the model. Auth contains all functions related to authentication of
+    users.
+  </li>
+  <li>
+    To separate the response and use the same controllers for Postman, Swagger
+    as well as browser, separate the response logic using
+    <i>if(req.header('accept')==='*/*')</i>, which will create responses for
+    Postman and Swagger in JSON format. Browsers accept a variety of formats,
+    hence the data can be rendered in dynamic templates in the else condition.
+  </li>
+  <li>
+    Express file upload will be used as an addition to the route for courses in
+    the POST method to upload images when the button is clicked. Logic is also
+    provided to move the file to the project folder.
+  </li>
+</ul>
+
+<strong>Step 7: Create the Middlewares</strong>
+<ul>
+  <li>
+    Create the middleware functions, which will handle errors, authentication (by creating cookie using token for authorized routes) and advanced results (queries with select, limit, pagination, etc.). functions will end with <i>next();</i> to ensure continuity to the next function.
+  </li>
+</ul>
+
+<strong>Step 8: Create the Routes</strong>
+<ul>
+  <li>
+    Create the routing for albums, tracks, users, reviews & auth. The routes
+    will contain all the routes for CRUD operations on the resources using
+    <i>GET, POST, PUT & DELETE</i> HTTP requests. Auth will contain routes for
+    authentication related operations. The routing files will be added to server.js
+    as middleware.
+  </li>
+</ul>
+
+<strong>Step 9: Create the Dynamic Views</strong><br />
+<ul>
+  <li>
+    Dynamic views require a template engine like EJB or PUG. The HTML format
+    will remain the same in the EJS file (same tags and structure), with special
+    tags like <i><% %></i> to display (render) objects / arrays / dynamic data
+    in the file. Template engines can render dynamic content easily.
+  </li>
+  <li>
+    Set the 'views' to 'dynamic' in the server.js file & provide the path to the
+    ejs files
+  </li>
+</ul>
+
+<strong>Step 10: Create the Swagger File and Routes</strong>
+<ul>
+  <li>
+    Create the swagger definition file, which contains the definitions of URL, schemas, api files, version, etc.  Serve the swagger file on '/docs' route and the json definition on 'docs.json' route.
+  </li>
+  <li>In the models file, use annotations with tag <i>@openapi</i> followed by the schemas to be used by the swagger routes</li>
+  <li>In the routes file, use annotations with tag <i>@openapi</i> followed by the paths (routes), requests and responses which will be displayed on the swagger route in the browser.</li>
+</ul>

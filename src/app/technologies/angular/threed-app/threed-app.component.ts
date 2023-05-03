@@ -19,6 +19,6 @@ export class ThreedAppComponent implements OnInit {
   }
 
   getProjectDetails(){
-    this.project = this.ps.getData();
+    this.project = this.ps.getAllProjects();
   }
 }

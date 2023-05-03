@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PdfResume } from 'src/app/files/pdf-resume';
+import { PdfResume } from 'src/assets/files/pdf-resume';
 
 @Component({
   selector: 'app-about',

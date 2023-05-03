@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#/home">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -18,17 +18,25 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" (click)="goToOta()"
-                >Online Test Application</a
+              <a
+              class="dropdown-item"
+              href="#/details/0/ota"
+              >Online Test Application</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="goToFba()">Blog Application</a>
+              <a
+                class="dropdown-item"
+                href="#/details/1/fba"
+                >Blog Application</a
+                >
             </li>
             <li>
-              <a class="dropdown-item" (click)="goToTma()"
+              <a
+                class="dropdown-item"
+                href="#/details/2/tma"
                 >3D Model Application</a
-              >
+                >
             </li>
           </ul>
         </li>
@@ -46,14 +54,18 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" (click)="goToEfa()"
+              <a
+                class="dropdown-item"
+                href="#/details/3/efa"
                 >Event Finder Application</a
-              >
+                >
             </li>
             <li>
-              <a class="dropdown-item" (click)="goToPsa()"
+              <a
+                class="dropdown-item"
+                href="#/details/4/psa"
                 >Pokemon Search Application</a
-              >
+                >
             </li>
           </ul>
         </li>
@@ -71,20 +83,24 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" (click)="goToLms()"
+              <a
+                class="dropdown-item"
+                href="#/details/5/lms"
                 >Learning Management System</a
-              >
+                >
             </li>
             <li>
-              <a class="dropdown-item" (click)="goToOml()"
-                >Online Music Library Application</a
-              >
+              <a
+                class="dropdown-item"
+                href="#/details/6/oms"
+                >Online Music Store Application</a
+                >
             </li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" (click)="goToAbout()">About</a>
+          <a class="nav-link" href="#/about">About</a>
         </li>
       </ul>
     </div>
