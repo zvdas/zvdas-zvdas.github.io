@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './main/about/about.component';
+import { MessagesComponent } from './main/messages/messages.component';
 import { ErrorComponent } from './main/error/error.component';
 import { HomeComponent } from './main/home/home.component';
 import { TemplateComponent } from './main/template/template.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'psa', component: PokemonSearchAppComponent },
   { path:'lms', component: LmsAppComponent },
   { path:'oms', component: OmsAppComponent },
+  { path:'messages', component: MessagesComponent },
   { path:'about', component: AboutComponent },
   { path:'', redirectTo:'/home', pathMatch:'full' },
   { path:'**', component: ErrorComponent }

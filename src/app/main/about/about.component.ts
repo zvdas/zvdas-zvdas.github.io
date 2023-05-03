@@ -9,7 +9,7 @@ import { PdfResume } from 'src/assets/files/pdf-resume';
 
 export class AboutComponent implements OnInit {
 
-  techStack: string[] = ['JavaScript','NodeJS','Express','React','Angular','Bootstrap','Angular Material','MongoDB','MySQL','REST APIs','Swagger'];
+  techStack: string[] = ['JavaScript','NodeJS','Express','React','Angular','Bootstrap','Angular Material','MongoDB','MySQL','REST APIs','Swagger','Postman'];
   // Python,Django,Flask,FastAPI,Next JS
 
   constructor() { }

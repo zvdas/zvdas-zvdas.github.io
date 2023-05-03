@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TemplateComponent } from './template/template.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ErrorComponent } from './error/error.component';
     NavbarComponent,
     TemplateComponent,
     AboutComponent,
-    ErrorComponent
+    ErrorComponent,
+    MessagesComponent
   ],
   imports: [
     CommonModule
