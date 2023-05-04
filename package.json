@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build && git add . && git commit -m 'deploy changes' && git push"
+    "deploy": "ng build && git add . && git commit -m 'deployed changes' && git push"
   },
   "private": true,
   "dependencies": {
