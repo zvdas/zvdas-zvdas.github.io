@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Project } from 'src/app/classes/project/project';
-import { ProjectService } from 'src/app/services/project/project.service';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Project } from 'src/app/models/project';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-oms-app',
@@ -8,7 +9,7 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./oms-app.component.css']
 })
 
-export class OmsAppComponent implements OnInit {
+export class OmsAppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild('iframe') iframe!: ElementRef;
 
@@ -16,15 +17,19 @@ export class OmsAppComponent implements OnInit {
 
   problem: string = '';
   writeup: string = '';
+  allSubscriptions: Subscription[] = new Array<Subscription>();
 
   constructor(private ps: ProjectService) { }
 
+  /**
+   * Lifecycle Methods
+   */
   ngOnInit(): void {
     this.getProjectDetails();
     this.getSelectedProblem();
     this.getSelectedWriteup();
   }
-  
+
   ngAfterViewInit(): void {
     const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
     doc.open();
@@ -32,16 +37,23 @@ export class OmsAppComponent implements OnInit {
     doc.close();
   }
 
+  ngOnDestroy(): void {
+    this.allSubscriptions.map(subscription => subscription.unsubscribe());
+  }
+
+  /**
+   * Public Methods
+   */
   getProjectDetails() {
     this.project = this.ps.getAllProjects();
   }
 
   getSelectedProblem() {
-    this.ps.getProblem(6).subscribe(x=>{this.problem = x});
+    this.allSubscriptions.push(this.ps.getProblem(6).subscribe(x=>{this.problem = x}));
   }
 
   getSelectedWriteup() {
-    this.ps.getWriteup(6).subscribe(x=>{this.writeup = x});    
+    this.allSubscriptions.push(this.ps.getWriteup(6).subscribe(x=>{this.writeup = x}));
   }
 
 }
