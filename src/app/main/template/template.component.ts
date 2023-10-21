@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from 'src/app/classes/project/project';
-import { ProjectService } from 'src/app/services/project/project.service';
+import { Project } from 'src/app/models/project';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-template',
@@ -32,7 +32,7 @@ export class TemplateComponent implements OnInit {
     this.getSelectedProblem(this.t);
     this.getSelectedWriteup(this.t);
   }
-  
+
   setIframe() {
     const doc = this.iframe.nativeElement.contentDocument;
     doc.open();
@@ -43,7 +43,7 @@ export class TemplateComponent implements OnInit {
   getSelectedProject(index: number){
     this.project = this.ps.getProjectByIndex(index);
   }
-  
+
   getSelectedScreenshot(index: number) {
     this.screenshots = this.ps.getScreenshots(index);
   }
