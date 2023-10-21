@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from 'src/app/classes/project/project';
-import { ProjectService } from 'src/app/services/project/project.service';
+import { Project } from 'src/app/models/project';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-threed-app',
