@@ -144,6 +144,19 @@ export function PdfResume() {
                 [
                     {
                         decoration: 'underline' as Decoration,
+                        text: 'Tactile Education Services Private Limited (ThinkTac)',
+                    },
+                    {
+                        type: 'circle' as UnorderedListType,
+                        ul: [
+                            'Category: Web Development',
+                            'Designation: Full Stack Developer Intern',
+                            'Timeline: June 2023 to Present',
+                            'Duties: Frontend Web Development using Angular (with Angular Material & Tailwind CSS) and Firebase as backend',
+                        ]
+                    },
+                    {
+                        decoration: 'underline' as Decoration,
                         text: 'Maargvani IT Solutions Private Limited (Angular Wiki)',
                     },
                     {
@@ -151,7 +164,7 @@ export function PdfResume() {
                         ul: [
                             'Category: Web Development',
                             'Designation: SDE Intern',
-                            'Timeline: November 2022 to Present',
+                            'Timeline: November 2022 to May 2023',
                             'Duties: Frontend Web Development using Angular (with Angular Material & Tailwind CSS)',
                         ]
                     },
