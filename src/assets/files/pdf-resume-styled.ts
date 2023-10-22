@@ -1,9 +1,9 @@
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-import { Alignment, UnorderedListType, CanvasLineElement, CanvasFilledElement, LineStyle, Decoration } from 'pdfmake/interfaces';
+import { Alignment, UnorderedListType, LineStyle, Decoration } from 'pdfmake/interfaces';
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
-export function PdfResumeStyled() {
+export async function PdfResumeStyled() {
 
     function dashedLine(start: number, end: number) {
         return {
@@ -43,7 +43,40 @@ export function PdfResumeStyled() {
         },
     };
 
+    function getBase64ImageFromURL(url: string) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.setAttribute("crossOrigin", "anonymous");
+
+          img.onload = () => {
+            const canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            const ctx = canvas.getContext("2d");
+            ctx!.drawImage(img, 0, 0);
+
+            const dataURL = canvas.toDataURL("image/png");
+
+            resolve(dataURL);
+          };
+
+          img.onerror = error => {
+            reject(error);
+          };
+
+          img.src = url;
+        });
+    };
+
+    const phone = await getBase64ImageFromURL('assets/images-webp/phone.webp');
+    const email = await getBase64ImageFromURL('assets/images-webp/email.webp');
+    const github = await getBase64ImageFromURL('assets/images-webp/github.webp');
+    const website = await getBase64ImageFromURL('assets/images-webp/website.webp');
+    const location = await getBase64ImageFromURL('assets/images-webp/location.webp');
+
     const docDefinition = {
+        // pageMargins: [30, 40, 30, 40] as Margins,
         content: [
             {
                 type: 'none' as UnorderedListType,
@@ -83,24 +116,74 @@ export function PdfResumeStyled() {
                                 type: 'none' as UnorderedListType,
                                 ul: [
                                     {
-                                        text: '797-203-7493 | 963-711-2081',
-                                        style: 'bodySection'
+                                        margin: [-6, 0, 0, -6.5],
+                                        columns: [
+                                            {
+                                                image: phone,
+                                                height: 25,
+                                                width: 25
+                                            },
+                                            {
+                                                text: '797-203-7493 | 963-711-2081',
+                                                style: 'bodySection'
+                                            },
+                                        ]
                                     },
                                     {
-                                        text: 'judeson.rodriguez@gmail.com',
-                                        style: 'bodySection'
+                                        margin: [-5, -7, 0, -6.5],
+                                        columns: [
+                                            {
+                                                image: email,
+                                                height: 25,
+                                                width: 25
+                                            },
+                                            {
+                                                text: 'judeson.rodriguez@gmail.com',
+                                                style: 'bodySection'
+                                            },
+                                        ]
                                     },
                                     {
-                                        text: 'https://github.com/zvdas',
-                                        style: 'bodySection'
+                                        margin: [-5.5, -8, 0, -6.5],
+                                        columns: [
+                                            {
+                                                image: github,
+                                                height: 25,
+                                                width: 25
+                                            },
+                                            {
+                                                text: 'https://github.com/zvdas',
+                                                style: 'bodySection'
+                                            },
+                                        ]
                                     },
                                     {
-                                        text: 'zvdas.github.io',
-                                        style: 'bodySection'
+                                        margin: [-5.5, -7.5, 0, -6.5],
+                                        columns: [
+                                            {
+                                                image: website,
+                                                height: 25,
+                                                width: 25
+                                            },
+                                            {
+                                                text: 'zvdas.github.io',
+                                                style: 'bodySection'
+                                            },
+                                        ]
                                     },
                                     {
-                                        text: 'Bengaluru, Karnataka',
-                                        style: 'bodySection'
+                                        margin: [-5.5, -7.5, 0, -18.5],
+                                        columns: [
+                                            {
+                                                image: location,
+                                                height: 25,
+                                                width: 25
+                                            },
+                                            {
+                                                text: 'Bengaluru, Karnataka',
+                                                style: 'bodySection'
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -394,7 +477,7 @@ export function PdfResumeStyled() {
                                 ul: [
                                     {
                                         text: 'Bachelor’s of Mechanical Engineering',
-                                        style: 'bodySection'
+                                        style: 'bodySectionSubTitle'
                                     },
                                     {
                                         text: 'Vishveshwarya Technical University',
@@ -407,7 +490,7 @@ export function PdfResumeStyled() {
                                     ' ',
                                     {
                                         text: 'HSSC',
-                                        style: 'bodySection'
+                                        style: 'bodySectionSubTitle'
                                     },
                                     {
                                         text: 'Goa Board',
@@ -420,7 +503,7 @@ export function PdfResumeStyled() {
                                     ' ',
                                     {
                                         text: 'SSC',
-                                        style: 'bodySection'
+                                        style: 'bodySectionSubTitle'
                                     },
                                     {
                                         text: 'CBSE Board',
