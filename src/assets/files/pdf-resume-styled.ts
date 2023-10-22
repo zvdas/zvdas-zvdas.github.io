@@ -69,11 +69,12 @@ export async function PdfResumeStyled() {
         });
     };
 
-    const phone = await getBase64ImageFromURL('assets/images-webp/phone.webp');
-    const email = await getBase64ImageFromURL('assets/images-webp/email.webp');
-    const github = await getBase64ImageFromURL('assets/images-webp/github.webp');
-    const website = await getBase64ImageFromURL('assets/images-webp/website.webp');
-    const location = await getBase64ImageFromURL('assets/images-webp/location.webp');
+    // const phone = await getBase64ImageFromURL('assets/images-webp/phone.webp');
+    const phone = await getBase64ImageFromURL('assets/images-svg/phone.svg');
+    const email = await getBase64ImageFromURL('assets/images-svg/email.svg');
+    const github = await getBase64ImageFromURL('assets/images-svg/github.svg');
+    const website = await getBase64ImageFromURL('assets/images-svg/website.svg');
+    const location = await getBase64ImageFromURL('assets/images-svg/location.svg');
 
     const docDefinition = {
         // pageMargins: [30, 40, 30, 40] as Margins,
@@ -116,72 +117,92 @@ export async function PdfResumeStyled() {
                                 type: 'none' as UnorderedListType,
                                 ul: [
                                     {
-                                        margin: [-6, 0, 0, -6.5],
+                                        // margin: [-6, 0, 0, -6.5],
+                                        margin: [-10, 0, 0, 0],
                                         columns: [
                                             {
                                                 image: phone,
-                                                height: 25,
-                                                width: 25
+                                                // height: 25,
+                                                // width: 25
+                                                height: 10,
+                                                width: 10
                                             },
                                             {
                                                 text: '797-203-7493 | 963-711-2081',
-                                                style: 'bodySection'
+                                                style: 'bodySection',
+                                                margin: [5, 0, 0, 0]
                                             },
                                         ]
                                     },
                                     {
-                                        margin: [-5, -7, 0, -6.5],
+                                        // margin: [-5, -7, 0, -6.5],
+                                        margin: [-10, 0, 0, 0],
                                         columns: [
                                             {
                                                 image: email,
-                                                height: 25,
-                                                width: 25
+                                                // height: 25,
+                                                // width: 25
+                                                height: 10,
+                                                width: 10
                                             },
                                             {
                                                 text: 'judeson.rodriguez@gmail.com',
-                                                style: 'bodySection'
+                                                style: 'bodySection',
+                                                margin: [5, 0, 0, 0]
                                             },
                                         ]
                                     },
                                     {
-                                        margin: [-5.5, -8, 0, -6.5],
+                                        // margin: [-5.5, -8, 0, -6.5],
+                                        margin: [-10, 0, 0, 0],
                                         columns: [
                                             {
                                                 image: github,
-                                                height: 25,
-                                                width: 25
+                                                // height: 25,
+                                                // width: 25
+                                                height: 10,
+                                                width: 10
                                             },
                                             {
                                                 text: 'https://github.com/zvdas',
-                                                style: 'bodySection'
+                                                style: 'bodySection',
+                                                margin: [5, 0, 0, 0]
                                             },
                                         ]
                                     },
                                     {
-                                        margin: [-5.5, -7.5, 0, -6.5],
+                                        // margin: [-5.5, -7.5, 0, -6.5],
+                                        margin: [-10, 0, 0, 0],
                                         columns: [
                                             {
                                                 image: website,
-                                                height: 25,
-                                                width: 25
+                                                // height: 25,
+                                                // width: 25
+                                                height: 10,
+                                                width: 10
                                             },
                                             {
                                                 text: 'zvdas.github.io',
-                                                style: 'bodySection'
+                                                style: 'bodySection',
+                                                margin: [5, 0, 0, 0]
                                             },
                                         ]
                                     },
                                     {
-                                        margin: [-5.5, -7.5, 0, -18.5],
+                                        // margin: [-5.5, -7.5, 0, -18.5],
+                                        margin: [-10, 0, 0, 0],
                                         columns: [
                                             {
                                                 image: location,
-                                                height: 25,
-                                                width: 25
+                                                // height: 25,
+                                                // width: 25
+                                                height: 10,
+                                                width: 10
                                             },
                                             {
                                                 text: 'Bengaluru, Karnataka',
-                                                style: 'bodySection'
+                                                style: 'bodySection',
+                                                margin: [5, 0, 0, 0]
                                             }
                                         ]
                                     }
