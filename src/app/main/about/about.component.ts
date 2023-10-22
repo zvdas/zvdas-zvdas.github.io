@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import html2canvas from 'html2canvas';
-import { jsPDF } from 'jspdf';
-import { first } from 'rxjs';
-import { ProjectService } from 'src/app/services/project.service';
 import { PdfResume } from 'src/assets/files/pdf-resume';
 import { PdfResumeStyled } from 'src/assets/files/pdf-resume-styled';
 
@@ -17,7 +13,7 @@ export class AboutComponent implements OnInit {
   techStack: string[] = ['JavaScript','NodeJS','Express','React','Angular','Bootstrap','Angular Material','MongoDB','MySQL','REST APIs','Swagger','Postman'];
   // Python,Django,Flask,FastAPI,Next JS
 
-  constructor(private projectService: ProjectService) { }
+  constructor() { }
 
   ngOnInit(): void {
     let hostStyle = document.documentElement.style;
@@ -46,7 +42,7 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  generatePdf() {
+  async generatePdf() {
     // PdfResume();
     PdfResumeStyled();
   }
