@@ -1,9 +1,8 @@
-<app-navbar></app-navbar>
 <div class="container">
     <h1 class="text-center text-white">{{ project.project_name }}</h1>
-    
+
     <div [innerHTML]="project.message"></div>
-    
+
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
             <div *ngFor="let screenshot of screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'" style="height: 500px;">
@@ -18,7 +17,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
+
     <div class="accordion accordion-flush my-2" id="headingMain">
         <div class="accordion-item">
             <h3 class="accordion-header" id="headingOne">

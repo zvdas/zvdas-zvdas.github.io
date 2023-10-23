@@ -1,10 +1,9 @@
-<app-navbar></app-navbar>
 <div class="container">
 
     <h1 class="text-center text-white">{{ project [0].project_name }}</h1>
 
     <div [innerHTML]="project[0].message"></div>
-    
+
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
             <div *ngFor="let screenshot of project[0].screenshots; let i = index; first as isFirst" [ngClass]="isFirst?'carousel-item active':'carousel-item'" style="height: 500px;">
