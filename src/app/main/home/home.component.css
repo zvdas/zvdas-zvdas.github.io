@@ -1,0 +1,5 @@
+.card {
+    border-color: #7c7c7c;
+    background: linear-gradient(top, rgba(38, 38, 38, 0.8), #e6e6e6 15%, #ffffff 80%, #c5c5c5 60%, #f7f7f7 60%, rgba(38, 38, 38, 0.8));
+    background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0.5), #e6e6e6 15%, #ffffff 80%, rgba(0, 0, 0, 0.25)  60%, #e6e6e6 60%, rgba(38, 38, 38, 0.4));
+}
