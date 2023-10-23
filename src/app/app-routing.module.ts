@@ -5,17 +5,12 @@ import { MessagesComponent } from './main/messages/messages.component';
 import { ErrorComponent } from './main/error/error.component';
 import { HomeComponent } from './main/home/home.component';
 import { TemplateComponent } from './main/template/template.component';
-import { BlogAppComponent } from './technologies/angular/blog-app/blog-app.component';
-import { OnlineTestAppComponent } from './technologies/angular/online-test-app/online-test-app.component';
-import { ThreedAppComponent } from './technologies/angular/threed-app/threed-app.component';
-import { LmsAppComponent } from './technologies/nodejs/lms-app/lms-app.component';
-import { OmsAppComponent } from './technologies/nodejs/oms-app/oms-app.component';
-import { EventFinderAppComponent } from './technologies/react/event-finder-app/event-finder-app.component';
-import { PokemonSearchAppComponent } from './technologies/react/pokemon-search-app/pokemon-search-app.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
   { path:'details/:id/:code', component: TemplateComponent },
+  /*
+  // all routes moved to TemplateComponent with path as code in params
   { path:'fba', component: BlogAppComponent },
   { path:'ota', component: OnlineTestAppComponent },
   { path:'tma', component: ThreedAppComponent },
@@ -23,6 +18,7 @@ const routes: Routes = [
   { path: 'psa', component: PokemonSearchAppComponent },
   { path:'lms', component: LmsAppComponent },
   { path:'oms', component: OmsAppComponent },
+  */
   { path:'messages', component: MessagesComponent },
   { path:'about', component: AboutComponent },
   { path:'', redirectTo:'/home', pathMatch:'full' },
