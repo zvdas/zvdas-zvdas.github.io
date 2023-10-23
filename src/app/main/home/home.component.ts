@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { first, lastValueFrom } from 'rxjs';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -10,9 +11,17 @@ import { ProjectService } from 'src/app/services/project.service';
 
 export class HomeComponent implements OnInit {
 
-  constructor(private ps: ProjectService, private router: Router) { }
+  introduction: string = '';
+
+  constructor(private ps: ProjectService/*, private router: Router*/) { }
 
   ngOnInit(): void {
+    this.getIntroduction();
+  }
+
+  async getIntroduction() {
+    const introduction = await lastValueFrom(this.ps.getIntroduction().pipe(first()));
+    this.introduction = introduction;
   }
 
   /*
@@ -58,4 +67,5 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['/template']);
   }
   */
+
 }

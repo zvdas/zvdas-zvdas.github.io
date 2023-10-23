@@ -39,4 +39,8 @@ export class ProjectService {
     return this.http.get(JSON.parse(JSON.stringify(this.project[index]))['procedure_link'], {responseType: 'text'});
   }
 
+  getIntroduction() {
+    return this.http.get('assets/files/introduction.html', {responseType: 'text'});
+  }
+
 }
