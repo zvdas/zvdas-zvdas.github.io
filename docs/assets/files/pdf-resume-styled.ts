@@ -413,10 +413,6 @@ export async function PdfResumeStyled() {
                                     {
                                         ul: [
                                             {
-                                                text: 'Development of frontend application for product portfolio',
-                                                style: 'bodySection'
-                                            },
-                                            {
                                                 text: 'Lead generation',
                                                 style: 'bodySection'
                                             },
