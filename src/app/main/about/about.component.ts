@@ -10,8 +10,9 @@ import { PdfResumeStyled } from 'src/assets/files/pdf-resume-styled';
 
 export class AboutComponent implements OnInit {
 
-  techStack: string[] = ['JavaScript','NodeJS','Express','React','Angular','Bootstrap','Angular Material','MongoDB','MySQL','REST APIs','Swagger','Postman'];
+  techStack: string[] = ['JavaScript', 'NodeJS', 'Express', 'React', 'Angular', 'Bootstrap', 'Angular Material', 'MongoDB', 'MySQL', 'REST APIs', 'Swagger', 'Postman'];
   // Python,Django,Flask,FastAPI,Next JS
+  yearsSpent: number = new Date().getFullYear() - 2022;
 
   constructor() { }
 
